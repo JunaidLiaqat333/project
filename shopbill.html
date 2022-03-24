@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         *{
+         margin: 0;
+         padding: 0;
+         /* background-color: rgb(110, 70, 16); */
+         }
+         /* ----------------------nav bar-------------- */
+         header{
+         width: 100%;
+         height: 80px;
+         /* background-color: aqua; */
+         display: flex;
+         background-color: rgb(119, 128, 44);
+         color: white;
+         }
+         #nav-bar{
+         display: flex;
+         /* justify-content: center; */
+         list-style-type: none;
+         /* background-color: greenyellow; */
+         line-height: 80px;
+         font-weight: bolder;
+         margin-left: 80px;
+         }
+         li{
+         margin-left: 30px;
+         }
+         #logo{
+         width: 40%;
+         height: 100px;
+         /* background-color: blue; */
+         /* background-color: greenyellow; */
+         }
+         #logo img{
+         width: 130px;
+         height: 80px;
+         margin-left: 50px;
+         margin-top: -5px;
+         }
+         #input{
+         width: 150px;
+         height: 30px;
+         margin-top: 25px;
+         border: none;
+         border-radius: 20px;
+         text-align: center;
+         margin-left: 9px;
+         }
+         #but{
+         height: 30px;
+         width: 80px;
+         margin-top: 25px;
+         border-radius: 20px;
+         background-color: none;
+         }
+         a{
+         height: 30px;
+         width: 80px;
+         margin-top: 25px;
+         margin-left: 30px;
+         background-color: burlywood;
+         border-radius: 20px;
+         text-align: center;
+         text-decoration: none;
+         line-height: 30px;
+         color: white;
+         }
+         @media screen {
+         #receiptBill{
+         display: none;
+         }
+         }
+         @media  print {
+         #myTable{
+         display: none;
+         }
+         #receiptBill{
+         width: fit-content;
+         margin:auto;
+         }
+         }
+         /* ------------------------ */
+         /* h1{
+         color: greenyellow;
+         margin-left:100px ;
+         } */
+         #Product{
+         background-color: aquamarine;
+         font-size: larger;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+         #myTable{
+         border: 2px solid red;
+         /* text-align: center; */
+         margin-left: 400px;
+         }
+         h1{
+         background-color: rgb(0, 255, 34);
+         }
+         button{
+         background-color: chocolate;
+         width: 100px;
+         height: 50px;
+         border: 2px solid black;
+         border-radius: 30px;
+         }
+         ul{
+         list-style-type: none;
+         }
+         #drop{
+         display: none;
+         position: absolute;
+         color: black;
+         background-color: rgb(107, 53, 118);
+         padding: none;
+         }
+         #course{
+         position: relative;
+         }
+         #course:hover #drop{
+         display: block;
+         /* background-color: rgb(9, 255, 0); */
+         }
+         #down{
+         display: none;
+         position: absolute;
+         color: black;
+         /* background-color: rgb(226, 223, 219); */
+         }
+         #FA{
+         position: relative;
+         }
+         #FA:hover #down{
+         display: block;
+         left: 45px;
+         top: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div id="logo">
+            <img src="store.PNG" alt="">
+         </div>
+         <nav id="nav">
+            <ul id="nav-bar">
+               <li>Home</li>
+               <li>Product</li>
+               <li>Price</li>
+               <li id="course">
+                  Contact
+                  <ul id="drop">
+                     <li id="FA">
+                        Junaid
+                        <ul id="down">
+                           <li>03037714073</li>
+                           <li>03068263626</li>
+                        </ul>
+                     </li>
+                     <!-- <li>
+                        MasterLiaqat
+                        <ul id="down">
+                           <li>0303-7714073</li>
+                           
+                        </ul>
+                        </li> -->
+                  </ul>
+               </li>
+               <!-- <li>Contact</li> -->
+               <li>About</li>
+            </ul>
+         </nav>
+         <input type="text" name="" id="input" placeholder="Serach.....">
+         <button id="but">Search</button>
+         <a href=""> Login</a>                           
+      </header>
+      <!-- -----------nav bar--------- -->
+      <table border="1" id="receiptBill">
+         <tr>
+            <td colspan="2">
+               <h3>MASTER LIAQAT KRYAN STORE</h3>
+            </td>
+         </tr>
+         <tbody id="billWaliDishen">
+         </tbody>
+         <tr>
+            <td>Bill</td>
+            <td id="receiptBillBox">0.00</td>
+         </tr>
+      </table>
+      <!-- ------------------ -->
+      <table id="myTable"  border="1px"  cellpadding="0" cellspacing="0">
+         <tr>
+            <th colspan="4">
+               <h1>MASTER LIAQAT KRYAN STORE</h1>
+            </th>
+         </tr>
+         <tr id="Product">
+            <th>Product Name</th>
+            <th>Price</th>
+            <th> Checked</th>
+            <th> Value</th>
+         </tr>
+         <tr>
+            <td class="name">Cheeni</td>
+            <td>95</td>
+            <td><input  type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Goor</td>
+            <td>150</td>
+            <td><input  type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Data Ghee</td>
+            <td>450</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Kasmir Ghee</td>
+            <td>470</td>
+            <td>
+               <input type="checkbox"/ >
+            </td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Kasmir Oil</td>
+            <td>470</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Pakwan Ghee</td>
+            <td>450</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Pakwan Oil</td>
+            <td>460</td>
+            <td><input  onchange="checkRaita(event)" type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Care Ghee</td>
+            <td>400</td>
+            <td><input id="raitaBox" type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Dal Mash</td>
+            <td>280</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Dal Chana</td>
+            <td>200</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Dal Mongi</td>
+            <td>260</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Dal Masor</td>
+            <td>240</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Kala Chana</td>
+            <td>200</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Sfad Chana</td>
+            <td>240</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Sabat Masor</td>
+            <td>220</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Giri</td>
+            <td>550</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Mewa</td>
+            <td>550</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Sonf</td>
+            <td>400</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Badam</td>
+            <td>400</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Badam Giri</td>
+            <td>1500</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Mita Soda</td>
+            <td>120</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Zira Sabat</td>
+            <td>850</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Mix  Gram Msala </td>
+            <td>1000</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Kali March </td>
+            <td>1200</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Sorak March </td>
+            <td>600</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Kholi Pati </td>
+            <td>550</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Haldi </td>
+            <td>500</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Sabat Rice Kaynat </td>
+            <td>160</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Sabat Rice Sela </td>
+            <td>160</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Adwar Rice </td>
+            <td>130</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Adwar dagi Rice </td>
+            <td>80</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Adwar tota Rice </td>
+            <td>110</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Nimko Dal </td>
+            <td>350</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Paka Chana </td>
+            <td>300</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">tangri Namkin </td>
+            <td>300</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Machli Papar  </td>
+            <td>300</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Coke Litter  </td>
+            <td>80</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Coke 1.5 Litter  </td>
+            <td>110</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Coke 2.25 Litter  </td>
+            <td>140</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Papsi Litter  </td>
+            <td>80</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Papsi 1.5 Litter  </td>
+            <td>110</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Papsi 2.25 Litter  </td>
+            <td>140</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Gorma  Litter  </td>
+            <td>60</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Gorma 1.5  Litter  </td>
+            <td>80</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Gorma 2.25  Litter  </td>
+            <td>100</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">All Company 300ml  Litter  </td>
+            <td>30</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Fruiten Juice  Litter  </td>
+            <td>120</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Gorma Juice  Litter  </td>
+            <td>120</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Gorma Juice Half Litter  </td>
+            <td>60</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name">Nestle Juice  Litter  </td>
+            <td>130</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name"> Biscuit  </td>
+            <td>320</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td class="name"> Cake  </td>
+            <td>320</td>
+            <td><input type="checkbox"/ ></td>
+            <td><input type="number"/ ></td>
+         </tr>
+         <tr>
+            <td>
+               <button onclick="getBill()">Get Bill</button>
+               <button onclick="printBill()">Print Bill</button>
+            </td>
+            <td id="totalBox">0.00</td>
+            <!-- <td id="discountBox">0.00</td> -->
+         </tr>
+      </table>
+      <script>
+         function checkRaita(evt){
+         
+           if(evt.target.checked){
+             raitaBox.checked = true;
+           }
+         
+         
+         }
+         
+         function printBill(){
+         window.print();
+         }
+         
+         function getBill(){
+         
+         let total = 0;
+         billWaliDishen.innerHTML = '';
+         
+         let orderedDishes = document.querySelectorAll("input[type=checkbox]:checked");
+         
+         for(let item of orderedDishes){
+         
+           let dishName = item.parentNode.previousElementSibling.previousElementSibling.innerText;
+         
+           
+           let dishBill= +item.parentNode.previousElementSibling.innerText * item.parentNode.nextElementSibling.children[0].value;
+           
+           if(item.nextElementSibling){
+             dishBill = dishBill * item.nextElementSibling.querySelector('input:checked').value
+           }
+         
+           total += dishBill;
+         
+           billWaliDishen.innerHTML += '<tr><td>'+dishName+'</td><td>'+dishBill+'</td></tr>';
+         }
+         
+         console.log(total);
+         
+         totalBox.innerText = total;
+         
+         receiptBillBox.innerText = total;
+         
+         if(total > 1200){
+           discountBox.innerText = "Discount Bill = "+(total * 0.90);
+         }
+         
+         }
+         
+         
+      </script>
+   </body>
+</html>
